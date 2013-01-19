@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>RPSyntaxHighlighter by rpwll</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/rpwll/RPSyntaxHighlighter">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/rpwll/RPSyntaxHighlighter/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/rpwll/RPSyntaxHighlighter/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>RPSyntaxHighlighter</h1>
+          <p>An NSAttributedString-backed syntax highlighter for iOS</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/rpwll">rpwll</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p>RPSyntaxHighlighter is a easy to use, fully extensible syntax highlighting library for iOS. It was built with a few ideas in mind:</p>
+
+<ol>
+<li>
+<strong>Ease of use:</strong> it should be easy to highlight and process code in your app. This is why we use <code>NSAttributedString</code>s which can be displayed in most UIKit controls as of iOS 6.</li>
+<li>
+<strong>Extensibility:</strong> The language definitions and themes used by RPSyntaxHighlighter are simple JSON files. This means it's easy to add extra languages or design a theme that matches your app.</li>
+<li>
+<strong>Simplicity:</strong> The entire RPSyntaxHighlighter codebase consists of three classes, meaning it's easy to understand what's going on. It's also fully documented with <a href="http://gentlebytes.com/appledoc/">appledoc</a>.</li>
+</ol><p><strong>Note:</strong> RPSyntaxHighlighter is currently still in development and not yet ready for use in your code.</p>
+
+<p><img src="https://raw.github.com/rpwll/RPSyntaxHighlighter/master/Media/screenshot.png" alt="A screenshot of the sample app"></p>
+
+<h2>Using RPSyntaxHighlighter</h2>
+
+<p>The easiest way to use RPSyntaxHighlighter is by calling the <code>highlightCode:withLanguage</code> method on it. This single method covers 90% of the most common use cases. If you want to do anything more complicated, the class headers are all thoroughly documented and serve as a good starting point.</p>
+
+<h2>Language Definitions</h2>
+
+<p>A simple language definition looks like so:</p>
+
+<div class="highlight"><pre><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">"scopes"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"operator"</span><span class="p">],</span>
+        <span class="nt">"pattern"</span> <span class="p">:</span> <span class="s2">"\\+|\\!|\\-|&amp;(gt|lt|amp);|\\||\\*|\\="</span>
+    <span class="p">},</span>
+    <span class="p">{</span><span class="err">...</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+<p>As should be immediately obvious, a language definition is nothing more than a JSON document containing an array of objects. Each of these objects consists of a regular expression <em>pattern</em> and an array of <em>scopes</em> to be applied to the matched section of code. The scopes applied to a section of code are effectively tags used to tell the highlighter how to style a section of code.</p>
+
+<p>The array of scopes are applied to a section of code in order, as such you should specify them in order from least to most specific such that more specific styles override simpler ones. The same goes for the order of matchers in the document.</p>
+
+<h2>Theme Definitions</h2>
+
+<p>Here's an exceprt taken from the included <code>tomorrow-night</code> theme:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">"default"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"color"</span> <span class="p">:</span> <span class="s2">"E9E2CB"</span><span class="p">,</span>
+    <span class="nt">"background"</span> <span class="p">:</span> <span class="s2">"1C1F21"</span><span class="p">,</span>
+    <span class="nt">"font"</span> <span class="p">:</span> <span class="s2">"DejaVuSansMono"</span><span class="p">,</span>
+    <span class="nt">"fontSize"</span> <span class="p">:</span> <span class="mf">14.0</span>
+  <span class="p">},</span>
+  <span class="nt">"keyword"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"color"</span> <span class="p">:</span> <span class="s2">"B193BA"</span>
+  <span class="p">},</span>
+  <span class="nt">"constant"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"color"</span> <span class="p">:</span> <span class="s2">"DD935E"</span>
+  <span class="p">},</span>
+  <span class="nt">"string"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"color"</span> <span class="p">:</span> <span class="s2">"B5BC67"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>As with language definitions, themes are simple JSON documents consisting of a single dictionary. Each key in the dictionary corresponds to a scope in the code to be highlighted with the exception of <em>default</em> which applies to the document as a whole.</p>
+
+<p>The value associated with these keys is another dictionary that can have any of the following properties:</p>
+
+<ul>
+<li>
+<strong>color</strong> – A hexadecimal colour value used to colour text</li>
+<li>
+<strong>background</strong> – A hexadecimal colour value used to highlight behind text</li>
+<li>
+<strong>font</strong> – The font to be used, referred to by its PostScript name</li>
+<li>
+<strong>fontSize</strong> – The size the font should be rendered at, in points</li>
+</ul><p>Note that any fonts you wish to use must be included in the main bundle of your app.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
