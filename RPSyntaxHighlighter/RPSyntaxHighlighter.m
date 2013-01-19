@@ -13,18 +13,33 @@
 
 @implementation RPSyntaxHighlighter
 
-- (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
++ (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
 {
-    self.code = code;
-    self.theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
-    self.matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
-    self.scopedMatches = [self findScopedMatches];
+    RPSyntaxHighlighter *highlighter = [[RPSyntaxHighlighter alloc] init];
     
-    return [self highlightedCode];
+    highlighter.code = code;
+    highlighter.theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
+    
+    return highlighter.highlightedCode;
 }
 
-- (NSArray *)findScopedMatches
+- (NSArray *)matchers
 {
+    if (_matchers) {
+        return _matchers;
+    }
+
+    _matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
+
+    return _matchers;
+}
+
+- (NSArray *)scopedMatches
+{
+    if (_scopedMatches) {
+        return _scopedMatches;
+    }
+    
     NSMutableArray *matches = [[NSMutableArray alloc] init];
     
     [self.matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -35,7 +50,9 @@
         }];
     }];
     
-    return matches;
+    _scopedMatches = [NSArray arrayWithArray:matches];
+    
+    return _scopedMatches;
 }
 
 - (NSAttributedString *)highlightedCode

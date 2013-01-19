@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSArray *matchers;
 @property (nonatomic, strong) NSArray *scopedMatches;
+@property (nonatomic, strong) NSAttributedString *highlightedCode;
 
 /**
  Highlights a block of code
@@ -30,8 +31,6 @@
  
  @return a syntax highlighted `NSAttributedString`
  */
-- (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language;
-
-- (NSArray *)findScopedMatches;
++ (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language;
 
 @end
