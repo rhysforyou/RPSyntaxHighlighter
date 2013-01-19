@@ -2,6 +2,8 @@
 
 *An `NSAttributedString`-backed syntax highlighting library for iOS*
 
+![A screenshot of the sample app](https://raw.github.com/rpwll/RPSyntaxHighlighter/master/Media/screenshot.png)
+
 RPSyntaxHighlighter is a easy to use, fully extensible syntax highlighting library for iOS. It was built with a few ideas in mind:
 
 1. **Ease of use:** it should be easy to highlight and process code in your app. This is why we use `NSAttributedString`s which can be displayed in most UIKit controls as of iOS 6.
