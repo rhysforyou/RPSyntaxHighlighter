@@ -26,7 +26,7 @@
         NSError *error = nil;
         self.styles = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         if (error) {
-            NSLog(@"[RPSyntaxHighlighter] Error loading tbeme JSON: %@", error.localizedDescription);
+            NSLog(@"[RPSyntaxHighlighter] Error loading theme JSON: %@", error.localizedDescription);
         }
     }
     

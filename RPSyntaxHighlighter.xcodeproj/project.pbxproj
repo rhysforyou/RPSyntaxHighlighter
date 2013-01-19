@@ -25,7 +25,7 @@
 		57C5C56016AA2FD40085757A /* DejaVuSansMono-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55C16AA2FD40085757A /* DejaVuSansMono-Oblique.ttf */; };
 		57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */; };
 		57C5C56416AA31260085757A /* RPSyntaxMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56316AA31260085757A /* RPSyntaxMatcher.m */; };
-		57C5C56716AA3A650085757A /* javascript.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56616AA3A650085757A /* javascript.json */; };
+		57C5C56716AA3A650085757A /* generic.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56616AA3A650085757A /* generic.json */; };
 		57C5C56A16AA46750085757A /* RPSyntaxTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56916AA46750085757A /* RPSyntaxTheme.m */; };
 		57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56B16AA46D70085757A /* tomorrownight.json */; };
 		57C5C56F16AA58580085757A /* UIColor+RPSyntaxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */; };
@@ -57,7 +57,7 @@
 		57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansMono.ttf; sourceTree = "<group>"; };
 		57C5C56216AA31260085757A /* RPSyntaxMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxMatcher.h; sourceTree = "<group>"; };
 		57C5C56316AA31260085757A /* RPSyntaxMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxMatcher.m; sourceTree = "<group>"; };
-		57C5C56616AA3A650085757A /* javascript.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = javascript.json; sourceTree = "<group>"; };
+		57C5C56616AA3A650085757A /* generic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generic.json; sourceTree = "<group>"; };
 		57C5C56816AA46750085757A /* RPSyntaxTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxTheme.h; sourceTree = "<group>"; };
 		57C5C56916AA46750085757A /* RPSyntaxTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxTheme.m; sourceTree = "<group>"; };
 		57C5C56B16AA46D70085757A /* tomorrownight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tomorrownight.json; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		57C5C56516AA3A3E0085757A /* Languages */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C56616AA3A650085757A /* javascript.json */,
+				57C5C56616AA3A650085757A /* generic.json */,
 			);
 			name = Languages;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 				57C5C55F16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf in Resources */,
 				57C5C56016AA2FD40085757A /* DejaVuSansMono-Oblique.ttf in Resources */,
 				57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */,
-				57C5C56716AA3A650085757A /* javascript.json in Resources */,
+				57C5C56716AA3A650085757A /* generic.json in Resources */,
 				57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

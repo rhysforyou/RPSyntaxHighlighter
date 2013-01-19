@@ -18,7 +18,7 @@
                                        NSForegroundColorAttributeName : [UIColor colorWithHue:0.13 saturation:0.13 brightness:0.92 alpha:1.0]};
     NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:globalAttributes];
     
-    NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"javascript"];
+    NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
     NSMutableDictionary *scopedRanges = [[NSMutableDictionary alloc] init];
     
     [matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
