@@ -21,7 +21,8 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"rainbow" ofType:@"js"];
     NSString *codeSnippet = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
-    NSAttributedString *code = [RPSyntaxHighlighter highlightCode:codeSnippet withLanguage:@"javascript"];
+    RPSyntaxHighlighter *highlighter = [[RPSyntaxHighlighter alloc] init];
+    NSAttributedString *code = [highlighter highlightCode:codeSnippet withLanguage:@"javascript"];
     
     [self.textView setAttributedText:code];
 }

@@ -10,6 +10,9 @@
 
 @interface RPSyntaxHighlighter : NSObject
 
+@property (nonatomic, strong) NSArray *matchers;
+@property (nonatomic, strong) NSString *code;
+
 /**
  Highlights a block of code
  
@@ -23,6 +26,8 @@
  
  @return a syntax highlighted `NSAttributedString`
  */
-+ (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language;
+- (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language;
+
+- (NSArray *)findScopedMatches;
 
 @end

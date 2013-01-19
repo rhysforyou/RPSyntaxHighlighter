@@ -13,21 +13,16 @@
 
 @implementation RPSyntaxHighlighter
 
-+ (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
+- (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
 {
+    self.code = code;
+    
     RPSyntaxTheme *theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
     NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:[theme defaultStyles]];
     
-    NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
-    NSMutableArray *matches = [[NSMutableArray alloc] init];
+    self.matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
     
-    [matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        RPSyntaxMatcher *matcher = (RPSyntaxMatcher *)obj;
-        [[matcher matchesInString:code] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-            RPScopedMatch *match = obj;
-            [matches addObject:match];
-        }];
-    }];
+    NSArray *matches = [self findScopedMatches];
     
     [matches enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         RPScopedMatch *match = obj;
@@ -38,6 +33,21 @@
     }];
     
     return highligtedCode;
+}
+
+- (NSArray *)findScopedMatches
+{
+    NSMutableArray *matches = [[NSMutableArray alloc] init];
+    
+    [self.matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        RPSyntaxMatcher *matcher = (RPSyntaxMatcher *)obj;
+        [[matcher matchesInString:self.code] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+            RPScopedMatch *match = obj;
+            [matches addObject:match];
+        }];
+    }];
+    
+    return matches;
 }
 
 @end
