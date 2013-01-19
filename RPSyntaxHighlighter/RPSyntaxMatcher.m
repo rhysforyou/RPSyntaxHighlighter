@@ -7,6 +7,7 @@
 //
 
 #import "RPSyntaxMatcher.h"
+#import "RPScopedMatch.h"
 
 @implementation RPSyntaxMatcher
 
@@ -37,7 +38,10 @@
     NSMutableSet *matches = [[NSMutableSet alloc] init];
     
     [self.pattern enumerateMatchesInString:string options:0 range:NSMakeRange(0, [string length]) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-        [matches addObject:[NSValue valueWithRange:result.range]];
+        RPScopedMatch *match = [[RPScopedMatch alloc] init];
+        match.scopes = self.scopes;
+        match.range = [result range];
+        [matches addObject:match];
     }];
     
     return [NSSet setWithSet:matches];

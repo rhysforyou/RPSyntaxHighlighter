@@ -23,19 +23,17 @@
 - (instancetype)initWithContentsOfFile:(NSString *)filename;
 
 /**
- Style parts of an attributed string for a given style
+ Returns the NSTextAttributes for a given scope
  
- You shouldn't need to call this method yourself. It applies styles as defined by
- the theme over the ranges given to it, typically the results of an `RPSyntaxMatcher`
- processing code.
+ This method is responsible for providing a dictionary of NSTextAttributes for a given
+ scope. It transforms the JSON representations of these styles into valid Objective-C
+ constructs in the process.
  
- @see RPSyntaxMatcher
+ @param scope the scope to return attributes for
  
- @param string the string styles should be applied to
- @param ranges an `NSSet` of `NSValue` objects containing the ranges to be styled
- @param styleName a name corresponding to style which should be used to highlight the ranges
+ @return an NSDictionary of NSTextAttributes
  */
-- (void)styleString:(NSMutableAttributedString *)string atRanges:(NSSet *)ranges forStyle:(NSString *)styleName;
+- (NSDictionary *)attributesForScope:(NSString *)scope;
 
 /**
  Default styles for the theme

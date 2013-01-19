@@ -25,7 +25,7 @@
      [
          {
              scopes: ["comment"],
-             pattern: "\\/\\*[\\s\\S]*?\\*\\/|(\\/\\/|\\#)[\\s\\S]*?$"
+             pattern: "\\/\\*[\\s\\S]*?\\*\\/|(\\/\\/|\\#)[\\s\\S]*?$",
          }
      ]
  
@@ -38,12 +38,14 @@
 /**
  Finds all the matches in a given string
  
- This method returns a set of matches in the given string that match the 
+ This method returns a set of matches in the given string that match the
  object's `pattern`.
+ 
+ @see RPScopedMatch
  
  @param string the `NSString` to be matched
  
- @return an `NSSet` of `NSRange`s corresponding to all the matches
+ @return an `NSSet` of `NSScopedMatch` objects
  */
 - (NSSet *)matchesInString:(NSString *)string;
 

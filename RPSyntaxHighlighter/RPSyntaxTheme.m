@@ -33,27 +33,32 @@
     return self;
 }
 
-- (void)styleString:(NSMutableAttributedString *)string atRanges:(NSSet *)ranges forStyle:(NSString *)styleName
+- (NSDictionary *)attributesForScope:(NSString *)scope
 {
-    NSDictionary *style = self.styles[styleName];
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
     
-    if (!style) {
-        return;
+    UIColor *foregroundColor = [UIColor colorWithHexString:self.styles[scope][@"color"]];
+    UIColor *backgroundColor = [UIColor colorWithHexString:self.styles[scope][@"background"]];
+    UIFont *font = [UIFont fontWithName:self.styles[scope][@"font"] size:[self.styles[scope][@"fontSize"] floatValue]];
+    
+    if (foregroundColor) {
+        attributes[NSForegroundColorAttributeName] = foregroundColor;
     }
     
-    UIColor *color = [UIColor colorWithHexString:style[@"color"]];
-    
-    for (NSValue *value in ranges) {
-        NSRange range = [value rangeValue];
-        [string addAttribute:NSForegroundColorAttributeName value:color range:range];
+    if (backgroundColor) {
+        attributes[NSBackgroundColorAttributeName] = backgroundColor;
     }
+    
+    if (font) {
+        attributes[NSFontAttributeName] = font;
+    }
+    
+    return attributes;
 }
 
 - (NSDictionary *)defaultStyles
 {
-  return @{NSForegroundColorAttributeName : [UIColor colorWithHexString:self.styles[@"default"][@"color"]],
-           NSBackgroundColorAttributeName : [UIColor colorWithHexString:self.styles[@"default"][@"background"]],
-           NSFontAttributeName : [UIFont fontWithName:self.styles[@"default"][@"font"] size:[self.styles[@"default"][@"fontSize"] floatValue]]};
+    return [self attributesForScope:@"default"];
     
 }
 

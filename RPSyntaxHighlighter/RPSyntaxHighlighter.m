@@ -9,6 +9,7 @@
 #import "RPSyntaxHighlighter.h"
 #import "RPSyntaxMatcher.h"
 #import "RPSyntaxTheme.h"
+#import "RPScopedMatch.h"
 
 @implementation RPSyntaxHighlighter
 
@@ -18,20 +19,21 @@
     NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:[theme defaultStyles]];
     
     NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
-    NSMutableDictionary *scopedRanges = [[NSMutableDictionary alloc] init];
+    NSMutableArray *matches = [[NSMutableArray alloc] init];
     
     [matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         RPSyntaxMatcher *matcher = (RPSyntaxMatcher *)obj;
-        scopedRanges[matcher.scopes] = [matcher matchesInString:code];
+        [[matcher matchesInString:code] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+            RPScopedMatch *match = obj;
+            [matches addObject:match];
+        }];
     }];
     
-    [scopedRanges enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        NSArray *scopes = (NSArray *)key;
-        NSSet *ranges = (NSSet *)obj;
-        
-        [scopes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSString *scope = (NSString *)obj;
-            [theme styleString:highligtedCode atRanges:ranges forStyle:scope];
+    [matches enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        RPScopedMatch *match = obj;
+        [match.scopes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSDictionary *textAttributes = [theme attributesForScope:obj];
+            [highligtedCode addAttributes:textAttributes range:match.range];
         }];
     }];
     
