@@ -12,11 +12,20 @@
 
 @interface RPSyntaxHighlighter : NSObject
 
-@property (nonatomic, strong) RPSyntaxTheme *theme;
+/** The code to be highlighted */
 @property (nonatomic, strong) NSString *code;
+
+/** The theme to use when highlighting the code */
+@property (nonatomic, strong) RPSyntaxTheme *theme;
+
+/** The array of matchers to be used when highlighting the code */
 @property (nonatomic, strong) NSArray *matchers;
-@property (nonatomic, strong) NSArray *scopedMatches;
-@property (nonatomic, strong) NSAttributedString *highlightedCode;
+
+/** The result of running the highlighter's code through its matchers, an array of `RPScopedMatcher` objects */
+@property (nonatomic, readonly) NSArray *scopedMatches;
+
+/** An computed attributed string containing the highlighted code */
+@property (nonatomic, readonly) NSAttributedString *highlightedCode;
 
 /**
  Highlights a block of code

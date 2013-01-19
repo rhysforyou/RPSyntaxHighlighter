@@ -13,6 +13,9 @@
 
 @implementation RPSyntaxHighlighter
 
+@synthesize scopedMatches = _scopedMatches;
+@synthesize highlightedCode = _highlightedCode;
+
 + (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
 {
     RPSyntaxHighlighter *highlighter = [[RPSyntaxHighlighter alloc] init];
