@@ -1,0 +1,21 @@
+{
+  "keyword" : {
+    "color" : "B193BA"
+  },
+  "comment" : {
+    "color" : "959795",
+    "italic" : true
+  },
+  "constant" : {
+    "color" : "DD935E"
+  },
+  "string", : {
+    "color" : "B5BC67"
+  },
+  "function" : {
+    "color" : "80A1BD"
+  },
+  "method" : {
+    "color" : "80A1BD"
+  }
+}

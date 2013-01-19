@@ -8,6 +8,7 @@
 
 #import "RPSyntaxHighlighter.h"
 #import "RPSyntaxMatcher.h"
+#import "RPSyntaxTheme.h"
 
 @implementation RPSyntaxHighlighter
 
@@ -18,12 +19,22 @@
     NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:globalAttributes];
     
     NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"javascript"];
+    NSMutableDictionary *scopedRanges = [[NSMutableDictionary alloc] init];
     
     [matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        for (NSValue *rangeValue in [(RPSyntaxMatcher *)obj matchesInString:code]) {
-            NSRange range = [rangeValue rangeValue];
-            [highligtedCode addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:range];
-        }
+        RPSyntaxMatcher *matcher = (RPSyntaxMatcher *)obj;
+        scopedRanges[matcher.scopes] = [matcher matchesInString:code];
+    }];
+    
+    RPSyntaxTheme *theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
+    [scopedRanges enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSArray *scopes = (NSArray *)key;
+        NSSet *ranges = (NSSet *)obj;
+        
+        [scopes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSString *scope = (NSString *)obj;
+            [theme styleString:highligtedCode atRanges:ranges forStyle:scope];
+        }];
     }];
     
     return highligtedCode;

@@ -26,6 +26,9 @@
 		57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */; };
 		57C5C56416AA31260085757A /* RPSyntaxMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56316AA31260085757A /* RPSyntaxMatcher.m */; };
 		57C5C56716AA3A650085757A /* javascript.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56616AA3A650085757A /* javascript.json */; };
+		57C5C56A16AA46750085757A /* RPSyntaxTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56916AA46750085757A /* RPSyntaxTheme.m */; };
+		57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56B16AA46D70085757A /* tomorrownight.json */; };
+		57C5C56F16AA58580085757A /* UIColor+RPSyntaxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,11 @@
 		57C5C56216AA31260085757A /* RPSyntaxMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxMatcher.h; sourceTree = "<group>"; };
 		57C5C56316AA31260085757A /* RPSyntaxMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxMatcher.m; sourceTree = "<group>"; };
 		57C5C56616AA3A650085757A /* javascript.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = javascript.json; sourceTree = "<group>"; };
+		57C5C56816AA46750085757A /* RPSyntaxTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxTheme.h; sourceTree = "<group>"; };
+		57C5C56916AA46750085757A /* RPSyntaxTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxTheme.m; sourceTree = "<group>"; };
+		57C5C56B16AA46D70085757A /* tomorrownight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tomorrownight.json; sourceTree = "<group>"; };
+		57C5C56D16AA58580085757A /* UIColor+RPSyntaxAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RPSyntaxAdditions.h"; sourceTree = "<group>"; };
+		57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RPSyntaxAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 		57C5C51F16A942660085757A = {
 			isa = PBXGroup;
 			children = (
+				57C5C56D16AA58580085757A /* UIColor+RPSyntaxAdditions.h */,
+				57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */,
 				57C5C53116A942660085757A /* RPSyntaxHighlighter */,
 				57C5C52A16A942660085757A /* Frameworks */,
 				57C5C52916A942660085757A /* Products */,
@@ -112,6 +122,9 @@
 				57C5C55616AA26580085757A /* RPSyntaxHighlighter.m */,
 				57C5C56216AA31260085757A /* RPSyntaxMatcher.h */,
 				57C5C56316AA31260085757A /* RPSyntaxMatcher.m */,
+				57C5C56816AA46750085757A /* RPSyntaxTheme.h */,
+				57C5C56916AA46750085757A /* RPSyntaxTheme.m */,
+				57C5C56B16AA46D70085757A /* tomorrownight.json */,
 			);
 			path = RPSyntaxHighlighter;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 				57C5C56016AA2FD40085757A /* DejaVuSansMono-Oblique.ttf in Resources */,
 				57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */,
 				57C5C56716AA3A650085757A /* javascript.json in Resources */,
+				57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +235,8 @@
 				57C5C54516A942660085757A /* RPViewController.m in Sources */,
 				57C5C55716AA26590085757A /* RPSyntaxHighlighter.m in Sources */,
 				57C5C56416AA31260085757A /* RPSyntaxMatcher.m in Sources */,
+				57C5C56A16AA46750085757A /* RPSyntaxTheme.m in Sources */,
+				57C5C56F16AA58580085757A /* UIColor+RPSyntaxAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
