@@ -21,7 +21,7 @@
     RPSyntaxHighlighter *highlighter = [[RPSyntaxHighlighter alloc] init];
     
     highlighter.code = code;
-    highlighter.theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
+    highlighter.theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrow-night"];
     
     return highlighter.highlightedCode;
 }

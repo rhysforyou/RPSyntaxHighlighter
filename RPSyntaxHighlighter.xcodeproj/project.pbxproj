@@ -10,26 +10,25 @@
 		57C5C52C16A942660085757A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C5C52B16A942660085757A /* UIKit.framework */; };
 		57C5C52E16A942660085757A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C5C52D16A942660085757A /* Foundation.framework */; };
 		57C5C53016A942660085757A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C5C52F16A942660085757A /* CoreGraphics.framework */; };
-		57C5C53616A942660085757A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C53416A942660085757A /* InfoPlist.strings */; };
-		57C5C53816A942660085757A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C53716A942660085757A /* main.m */; };
-		57C5C53C16A942660085757A /* RPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C53B16A942660085757A /* RPAppDelegate.m */; };
-		57C5C53E16A942660085757A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C53D16A942660085757A /* Default.png */; };
-		57C5C54016A942660085757A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C53F16A942660085757A /* Default@2x.png */; };
-		57C5C54216A942660085757A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C54116A942660085757A /* Default-568h@2x.png */; };
-		57C5C54516A942660085757A /* RPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C54416A942660085757A /* RPViewController.m */; };
-		57C5C55216AA21010085757A /* rainbow.js in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55116AA21010085757A /* rainbow.js */; };
-		57C5C55416AA218D0085757A /* RPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55316AA218D0085757A /* RPViewController.xib */; };
 		57C5C55716AA26590085757A /* RPSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C55616AA26580085757A /* RPSyntaxHighlighter.m */; };
-		57C5C55E16AA2FD40085757A /* DejaVuSansMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55A16AA2FD40085757A /* DejaVuSansMono-Bold.ttf */; };
-		57C5C55F16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55B16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf */; };
-		57C5C56016AA2FD40085757A /* DejaVuSansMono-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55C16AA2FD40085757A /* DejaVuSansMono-Oblique.ttf */; };
-		57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */; };
 		57C5C56416AA31260085757A /* RPSyntaxMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56316AA31260085757A /* RPSyntaxMatcher.m */; };
-		57C5C56716AA3A650085757A /* generic.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56616AA3A650085757A /* generic.json */; };
 		57C5C56A16AA46750085757A /* RPSyntaxTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56916AA46750085757A /* RPSyntaxTheme.m */; };
-		57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C56B16AA46D70085757A /* tomorrownight.json */; };
-		57C5C56F16AA58580085757A /* UIColor+RPSyntaxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */; };
 		57C5C57216AA9AD60085757A /* RPScopedMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C57116AA9AD60085757A /* RPScopedMatch.m */; };
+		57C5C57816AAC0820085757A /* UIColor+RPSyntaxAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C57716AAC0820085757A /* UIColor+RPSyntaxAdditions.m */; };
+		57C5C57A16AAC0DF0085757A /* generic.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C57916AAC0DF0085757A /* generic.json */; };
+		57C5C57C16AAC0EF0085757A /* tomorrow-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C57B16AAC0EF0085757A /* tomorrow-night.json */; };
+		57C5C58216AAC1050085757A /* RPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C57E16AAC1050085757A /* RPAppDelegate.m */; };
+		57C5C58316AAC1050085757A /* RPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C58016AAC1050085757A /* RPViewController.m */; };
+		57C5C58416AAC1050085757A /* RPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58116AAC1050085757A /* RPViewController.xib */; };
+		57C5C58F16AAC1200085757A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58516AAC1200085757A /* Default-568h@2x.png */; };
+		57C5C59016AAC1200085757A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58616AAC1200085757A /* Default.png */; };
+		57C5C59116AAC1200085757A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58716AAC1200085757A /* Default@2x.png */; };
+		57C5C59216AAC1200085757A /* DejaVuSansMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58816AAC1200085757A /* DejaVuSansMono-Bold.ttf */; };
+		57C5C59316AAC1200085757A /* DejaVuSansMono-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58916AAC1200085757A /* DejaVuSansMono-BoldOblique.ttf */; };
+		57C5C59416AAC1200085757A /* DejaVuSansMono-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58A16AAC1200085757A /* DejaVuSansMono-Oblique.ttf */; };
+		57C5C59516AAC1200085757A /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C58B16AAC1200085757A /* DejaVuSansMono.ttf */; };
+		57C5C59616AAC1200085757A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C5C58C16AAC1200085757A /* main.m */; };
+		57C5C59916AAC1E80085757A /* rainbow.js in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C59816AAC1E80085757A /* rainbow.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,35 +36,34 @@
 		57C5C52B16A942660085757A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57C5C52D16A942660085757A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		57C5C52F16A942660085757A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		57C5C53316A942660085757A /* RPSyntaxHighlighter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPSyntaxHighlighter-Info.plist"; sourceTree = "<group>"; };
-		57C5C53516A942660085757A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		57C5C53716A942660085757A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		57C5C53916A942660085757A /* RPSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPSyntaxHighlighter-Prefix.pch"; sourceTree = "<group>"; };
-		57C5C53A16A942660085757A /* RPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RPAppDelegate.h; path = RPSyntaxHighlighter/RPAppDelegate.h; sourceTree = "<group>"; };
-		57C5C53B16A942660085757A /* RPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RPAppDelegate.m; path = RPSyntaxHighlighter/RPAppDelegate.m; sourceTree = "<group>"; };
-		57C5C53D16A942660085757A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		57C5C53F16A942660085757A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		57C5C54116A942660085757A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		57C5C54316A942660085757A /* RPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RPViewController.h; path = RPSyntaxHighlighter/RPViewController.h; sourceTree = "<group>"; };
-		57C5C54416A942660085757A /* RPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RPViewController.m; path = RPSyntaxHighlighter/RPViewController.m; sourceTree = "<group>"; };
-		57C5C55116AA21010085757A /* rainbow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rainbow.js; sourceTree = "<group>"; };
-		57C5C55316AA218D0085757A /* RPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPViewController.xib; path = RPSyntaxHighlighter/RPViewController.xib; sourceTree = "<group>"; };
 		57C5C55516AA26580085757A /* RPSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxHighlighter.h; sourceTree = "<group>"; };
 		57C5C55616AA26580085757A /* RPSyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxHighlighter.m; sourceTree = "<group>"; };
-		57C5C55A16AA2FD40085757A /* DejaVuSansMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansMono-Bold.ttf"; sourceTree = "<group>"; };
-		57C5C55B16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansMono-BoldOblique.ttf"; sourceTree = "<group>"; };
-		57C5C55C16AA2FD40085757A /* DejaVuSansMono-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansMono-Oblique.ttf"; sourceTree = "<group>"; };
-		57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansMono.ttf; sourceTree = "<group>"; };
 		57C5C56216AA31260085757A /* RPSyntaxMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxMatcher.h; sourceTree = "<group>"; };
 		57C5C56316AA31260085757A /* RPSyntaxMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxMatcher.m; sourceTree = "<group>"; };
-		57C5C56616AA3A650085757A /* generic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generic.json; sourceTree = "<group>"; };
 		57C5C56816AA46750085757A /* RPSyntaxTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSyntaxTheme.h; sourceTree = "<group>"; };
 		57C5C56916AA46750085757A /* RPSyntaxTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSyntaxTheme.m; sourceTree = "<group>"; };
-		57C5C56B16AA46D70085757A /* tomorrownight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tomorrownight.json; sourceTree = "<group>"; };
-		57C5C56D16AA58580085757A /* UIColor+RPSyntaxAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RPSyntaxAdditions.h"; path = "../UIColor+RPSyntaxAdditions.h"; sourceTree = "<group>"; };
-		57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RPSyntaxAdditions.m"; path = "../UIColor+RPSyntaxAdditions.m"; sourceTree = "<group>"; };
 		57C5C57016AA9AD60085757A /* RPScopedMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPScopedMatch.h; sourceTree = "<group>"; };
 		57C5C57116AA9AD60085757A /* RPScopedMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPScopedMatch.m; sourceTree = "<group>"; };
+		57C5C57616AAC0820085757A /* UIColor+RPSyntaxAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RPSyntaxAdditions.h"; sourceTree = "<group>"; };
+		57C5C57716AAC0820085757A /* UIColor+RPSyntaxAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RPSyntaxAdditions.m"; sourceTree = "<group>"; };
+		57C5C57916AAC0DF0085757A /* generic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = generic.json; path = "Language Definitions/generic.json"; sourceTree = SOURCE_ROOT; };
+		57C5C57B16AAC0EF0085757A /* tomorrow-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "tomorrow-night.json"; path = "Themes/tomorrow-night.json"; sourceTree = SOURCE_ROOT; };
+		57C5C57D16AAC1050085757A /* RPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPAppDelegate.h; path = Demo/RPAppDelegate.h; sourceTree = "<group>"; };
+		57C5C57E16AAC1050085757A /* RPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPAppDelegate.m; path = Demo/RPAppDelegate.m; sourceTree = "<group>"; };
+		57C5C57F16AAC1050085757A /* RPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPViewController.h; path = Demo/RPViewController.h; sourceTree = "<group>"; };
+		57C5C58016AAC1050085757A /* RPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPViewController.m; path = Demo/RPViewController.m; sourceTree = "<group>"; };
+		57C5C58116AAC1050085757A /* RPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPViewController.xib; path = Demo/RPViewController.xib; sourceTree = "<group>"; };
+		57C5C58516AAC1200085757A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Demo/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		57C5C58616AAC1200085757A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Demo/Default.png; sourceTree = SOURCE_ROOT; };
+		57C5C58716AAC1200085757A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Demo/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		57C5C58816AAC1200085757A /* DejaVuSansMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DejaVuSansMono-Bold.ttf"; path = "Demo/DejaVuSansMono-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		57C5C58916AAC1200085757A /* DejaVuSansMono-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DejaVuSansMono-BoldOblique.ttf"; path = "Demo/DejaVuSansMono-BoldOblique.ttf"; sourceTree = SOURCE_ROOT; };
+		57C5C58A16AAC1200085757A /* DejaVuSansMono-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DejaVuSansMono-Oblique.ttf"; path = "Demo/DejaVuSansMono-Oblique.ttf"; sourceTree = SOURCE_ROOT; };
+		57C5C58B16AAC1200085757A /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DejaVuSansMono.ttf; path = Demo/DejaVuSansMono.ttf; sourceTree = SOURCE_ROOT; };
+		57C5C58C16AAC1200085757A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = SOURCE_ROOT; };
+		57C5C58D16AAC1200085757A /* RPSyntaxHighlighter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RPSyntaxHighlighter-Info.plist"; path = "Demo/RPSyntaxHighlighter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		57C5C58E16AAC1200085757A /* RPSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPSyntaxHighlighter-Prefix.pch"; path = "Demo/RPSyntaxHighlighter-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		57C5C59816AAC1E80085757A /* rainbow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rainbow.js; path = Demo/rainbow.js; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 				57C5C57516AA9E650085757A /* Categories */,
 				57C5C57416AA9E480085757A /* Themes */,
 				57C5C56516AA3A3E0085757A /* Language Definitions */,
-				57C5C53216A942660085757A /* Supporting Files */,
 				57C5C55516AA26580085757A /* RPSyntaxHighlighter.h */,
 				57C5C55616AA26580085757A /* RPSyntaxHighlighter.m */,
 				57C5C56216AA31260085757A /* RPSyntaxMatcher.h */,
@@ -132,26 +129,26 @@
 		57C5C53216A942660085757A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C55A16AA2FD40085757A /* DejaVuSansMono-Bold.ttf */,
-				57C5C55B16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf */,
-				57C5C55C16AA2FD40085757A /* DejaVuSansMono-Oblique.ttf */,
-				57C5C55D16AA2FD40085757A /* DejaVuSansMono.ttf */,
-				57C5C55116AA21010085757A /* rainbow.js */,
-				57C5C53316A942660085757A /* RPSyntaxHighlighter-Info.plist */,
-				57C5C53416A942660085757A /* InfoPlist.strings */,
-				57C5C53716A942660085757A /* main.m */,
-				57C5C53916A942660085757A /* RPSyntaxHighlighter-Prefix.pch */,
-				57C5C53D16A942660085757A /* Default.png */,
-				57C5C53F16A942660085757A /* Default@2x.png */,
-				57C5C54116A942660085757A /* Default-568h@2x.png */,
+				57C5C59816AAC1E80085757A /* rainbow.js */,
+				57C5C58516AAC1200085757A /* Default-568h@2x.png */,
+				57C5C58616AAC1200085757A /* Default.png */,
+				57C5C58716AAC1200085757A /* Default@2x.png */,
+				57C5C58816AAC1200085757A /* DejaVuSansMono-Bold.ttf */,
+				57C5C58916AAC1200085757A /* DejaVuSansMono-BoldOblique.ttf */,
+				57C5C58A16AAC1200085757A /* DejaVuSansMono-Oblique.ttf */,
+				57C5C58B16AAC1200085757A /* DejaVuSansMono.ttf */,
+				57C5C58C16AAC1200085757A /* main.m */,
+				57C5C58D16AAC1200085757A /* RPSyntaxHighlighter-Info.plist */,
+				57C5C58E16AAC1200085757A /* RPSyntaxHighlighter-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = RPSyntaxHighlighter;
 			sourceTree = "<group>";
 		};
 		57C5C56516AA3A3E0085757A /* Language Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C56616AA3A650085757A /* generic.json */,
+				57C5C57916AAC0DF0085757A /* generic.json */,
 			);
 			name = "Language Definitions";
 			sourceTree = "<group>";
@@ -159,11 +156,12 @@
 		57C5C57316AA9E130085757A /* Demo App */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C53A16A942660085757A /* RPAppDelegate.h */,
-				57C5C53B16A942660085757A /* RPAppDelegate.m */,
-				57C5C54316A942660085757A /* RPViewController.h */,
-				57C5C54416A942660085757A /* RPViewController.m */,
-				57C5C55316AA218D0085757A /* RPViewController.xib */,
+				57C5C57D16AAC1050085757A /* RPAppDelegate.h */,
+				57C5C57E16AAC1050085757A /* RPAppDelegate.m */,
+				57C5C57F16AAC1050085757A /* RPViewController.h */,
+				57C5C58016AAC1050085757A /* RPViewController.m */,
+				57C5C58116AAC1050085757A /* RPViewController.xib */,
+				57C5C53216A942660085757A /* Supporting Files */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
@@ -171,7 +169,7 @@
 		57C5C57416AA9E480085757A /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C56B16AA46D70085757A /* tomorrownight.json */,
+				57C5C57B16AAC0EF0085757A /* tomorrow-night.json */,
 			);
 			name = Themes;
 			sourceTree = "<group>";
@@ -179,8 +177,8 @@
 		57C5C57516AA9E650085757A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C56D16AA58580085757A /* UIColor+RPSyntaxAdditions.h */,
-				57C5C56E16AA58580085757A /* UIColor+RPSyntaxAdditions.m */,
+				57C5C57616AAC0820085757A /* UIColor+RPSyntaxAdditions.h */,
+				57C5C57716AAC0820085757A /* UIColor+RPSyntaxAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -237,18 +235,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C5C55216AA21010085757A /* rainbow.js in Resources */,
-				57C5C53616A942660085757A /* InfoPlist.strings in Resources */,
-				57C5C53E16A942660085757A /* Default.png in Resources */,
-				57C5C54016A942660085757A /* Default@2x.png in Resources */,
-				57C5C54216A942660085757A /* Default-568h@2x.png in Resources */,
-				57C5C55416AA218D0085757A /* RPViewController.xib in Resources */,
-				57C5C55E16AA2FD40085757A /* DejaVuSansMono-Bold.ttf in Resources */,
-				57C5C55F16AA2FD40085757A /* DejaVuSansMono-BoldOblique.ttf in Resources */,
-				57C5C56016AA2FD40085757A /* DejaVuSansMono-Oblique.ttf in Resources */,
-				57C5C56116AA2FD40085757A /* DejaVuSansMono.ttf in Resources */,
-				57C5C56716AA3A650085757A /* generic.json in Resources */,
-				57C5C56C16AA46D70085757A /* tomorrownight.json in Resources */,
+				57C5C59916AAC1E80085757A /* rainbow.js in Resources */,
+				57C5C57C16AAC0EF0085757A /* tomorrow-night.json in Resources */,
+				57C5C57A16AAC0DF0085757A /* generic.json in Resources */,
+				57C5C58416AAC1050085757A /* RPViewController.xib in Resources */,
+				57C5C58F16AAC1200085757A /* Default-568h@2x.png in Resources */,
+				57C5C59016AAC1200085757A /* Default.png in Resources */,
+				57C5C59116AAC1200085757A /* Default@2x.png in Resources */,
+				57C5C59216AAC1200085757A /* DejaVuSansMono-Bold.ttf in Resources */,
+				57C5C59316AAC1200085757A /* DejaVuSansMono-BoldOblique.ttf in Resources */,
+				57C5C59416AAC1200085757A /* DejaVuSansMono-Oblique.ttf in Resources */,
+				57C5C59516AAC1200085757A /* DejaVuSansMono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,29 +256,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C5C53816A942660085757A /* main.m in Sources */,
-				57C5C53C16A942660085757A /* RPAppDelegate.m in Sources */,
-				57C5C54516A942660085757A /* RPViewController.m in Sources */,
 				57C5C55716AA26590085757A /* RPSyntaxHighlighter.m in Sources */,
 				57C5C56416AA31260085757A /* RPSyntaxMatcher.m in Sources */,
 				57C5C56A16AA46750085757A /* RPSyntaxTheme.m in Sources */,
-				57C5C56F16AA58580085757A /* UIColor+RPSyntaxAdditions.m in Sources */,
 				57C5C57216AA9AD60085757A /* RPScopedMatch.m in Sources */,
+				57C5C57816AAC0820085757A /* UIColor+RPSyntaxAdditions.m in Sources */,
+				57C5C58216AAC1050085757A /* RPAppDelegate.m in Sources */,
+				57C5C58316AAC1050085757A /* RPViewController.m in Sources */,
+				57C5C59616AAC1200085757A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		57C5C53416A942660085757A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57C5C53516A942660085757A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		57C5C54C16A942660085757A /* Debug */ = {
@@ -346,8 +332,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RPSyntaxHighlighter/RPSyntaxHighlighter-Prefix.pch";
-				INFOPLIST_FILE = "RPSyntaxHighlighter/RPSyntaxHighlighter-Info.plist";
+				GCC_PREFIX_HEADER = "Demo/RPSyntaxHighlighter-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/RPSyntaxHighlighter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -358,8 +344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RPSyntaxHighlighter/RPSyntaxHighlighter-Prefix.pch";
-				INFOPLIST_FILE = "RPSyntaxHighlighter/RPSyntaxHighlighter-Info.plist";
+				GCC_PREFIX_HEADER = "Demo/RPSyntaxHighlighter-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/RPSyntaxHighlighter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
