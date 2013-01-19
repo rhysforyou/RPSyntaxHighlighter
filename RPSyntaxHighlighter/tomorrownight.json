@@ -8,10 +8,6 @@
   "keyword" : {
     "color" : "B193BA"
   },
-  "comment" : {
-    "color" : "959795",
-    "italic" : true
-  },
   "constant" : {
     "color" : "DD935E"
   },
@@ -23,5 +19,12 @@
   },
   "method" : {
     "color" : "80A1BD"
+  },
+  "operator" : {
+    "color" : "89BDB6"
+  },
+  "comment" : {
+    "color" : "959795",
+    "italic" : true
   }
 }
