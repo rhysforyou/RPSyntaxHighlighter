@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class RPSyntaxTheme;
+
 @interface RPSyntaxHighlighter : NSObject
 
-@property (nonatomic, strong) NSArray *matchers;
+@property (nonatomic, strong) RPSyntaxTheme *theme;
 @property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSArray *matchers;
+@property (nonatomic, strong) NSArray *scopedMatches;
 
 /**
  Highlights a block of code
