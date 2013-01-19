@@ -49,4 +49,12 @@
     }
 }
 
+- (NSDictionary *)defaultStyles
+{
+  return @{NSForegroundColorAttributeName : [UIColor colorWithHexString:self.styles[@"default"][@"color"]],
+           NSBackgroundColorAttributeName : [UIColor colorWithHexString:self.styles[@"default"][@"background"]],
+           NSFontAttributeName : [UIFont fontWithName:self.styles[@"default"][@"font"] size:[self.styles[@"default"][@"fontSize"] floatValue]]};
+    
+}
+
 @end

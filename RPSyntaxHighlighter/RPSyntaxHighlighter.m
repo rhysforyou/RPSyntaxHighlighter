@@ -14,9 +14,8 @@
 
 + (NSAttributedString *)highlightCode:(NSString *)code withLanguage:(NSString *)language
 {
-    NSDictionary *globalAttributes = @{NSFontAttributeName : [UIFont fontWithName:@"DejaVuSansMono" size:16.0f],
-                                       NSForegroundColorAttributeName : [UIColor colorWithHue:0.13 saturation:0.13 brightness:0.92 alpha:1.0]};
-    NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:globalAttributes];
+    RPSyntaxTheme *theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
+    NSMutableAttributedString *highligtedCode = [[NSMutableAttributedString alloc] initWithString:code attributes:[theme defaultStyles]];
     
     NSArray *matchers = [RPSyntaxMatcher matchersWithFile:@"generic"];
     NSMutableDictionary *scopedRanges = [[NSMutableDictionary alloc] init];
@@ -26,7 +25,6 @@
         scopedRanges[matcher.scopes] = [matcher matchesInString:code];
     }];
     
-    RPSyntaxTheme *theme = [[RPSyntaxTheme alloc] initWithContentsOfFile:@"tomorrownight"];
     [scopedRanges enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSArray *scopes = (NSArray *)key;
         NSSet *ranges = (NSSet *)obj;

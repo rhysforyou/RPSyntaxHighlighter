@@ -12,5 +12,6 @@
 
 - (instancetype)initWithContentsOfFile:(NSString *)filename;
 - (void)styleString:(NSMutableAttributedString *)string atRanges:(NSSet *)ranges forStyle:(NSString *)styleName;
+- (NSDictionary *)defaultStyles;
 
 @end
