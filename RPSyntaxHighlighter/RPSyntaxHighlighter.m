@@ -43,14 +43,30 @@
         return _scopedMatches;
     }
     
-    NSMutableArray *matches = [[NSMutableArray alloc] init];
+    NSMutableArray *prospectiveMatches = [[NSMutableArray alloc] init];
     
     [self.matchers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         RPSyntaxMatcher *matcher = (RPSyntaxMatcher *)obj;
         [[matcher matchesInString:self.code] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-            RPScopedMatch *match = obj;
-            [matches addObject:match];
+            [prospectiveMatches addObject:obj];
         }];
+    }];
+    
+    __block NSMutableArray *matches = [[NSMutableArray alloc] init];
+    
+    [prospectiveMatches enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        RPScopedMatch *match = obj;
+        __block BOOL shouldAdd = YES;
+        
+        [matches enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([match overlapsMatch:obj] || [match containedByMatch:obj]) {
+                shouldAdd = NO;
+            }
+        }];
+        
+        if (shouldAdd) {
+            [matches addObject:obj];
+        }
     }];
     
     _scopedMatches = [NSArray arrayWithArray:matches];

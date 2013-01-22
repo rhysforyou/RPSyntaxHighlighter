@@ -10,4 +10,34 @@
 
 @implementation RPScopedMatch
 
+- (BOOL)overlapsMatch:(RPScopedMatch *)match
+{
+    CGFloat thisStart  = self.range.location;
+    CGFloat thisEnd    = self.range.location + self.range.length;
+    CGFloat otherStart = match.range.location;
+    CGFloat otherEnd   = match.range.location + match.range.length;
+    
+    if (thisEnd > otherStart && thisEnd < otherEnd) {
+        return YES;
+    } else if (thisStart > otherStart && thisStart < otherEnd) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)containedByMatch:(RPScopedMatch *)match
+{
+    CGFloat thisStart  = self.range.location;
+    CGFloat thisEnd    = self.range.location + self.range.length;
+    CGFloat otherStart = match.range.location;
+    CGFloat otherEnd   = match.range.location + match.range.length;
+    
+    if (thisStart > otherStart && thisStart < otherEnd && thisEnd > otherStart && thisEnd < otherEnd) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

@@ -13,4 +13,7 @@
 @property (nonatomic) NSRange range;
 @property (nonatomic, strong) NSArray *scopes;
 
+- (BOOL)overlapsMatch:(RPScopedMatch *)match;
+- (BOOL)containedByMatch:(RPScopedMatch *)match;
+
 @end
