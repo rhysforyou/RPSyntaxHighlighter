@@ -32,7 +32,7 @@
       <section>
         <div id="title">
           <h1>RPSyntaxHighlighter</h1>
-          <p>An NSAttributedString-backed syntax highlighter for iOS</p>
+          <p>A regexp-powered, NSAttributedString-backed syntax highlighting library for iOS</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/rpwll">rpwll</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
@@ -44,12 +44,12 @@
 
 <ol>
 <li>
-<strong>Ease of use:</strong> it should be easy to highlight and process code in your app. This is why we use <code>NSAttributedString</code>s which can be displayed in most UIKit controls as of iOS 6.</li>
+<strong>Ease of use:</strong> it should be easy to highlight and process code in your app. This is why we use <code>NSAttributedString</code> objects which can be displayed in most UIKit controls as of iOS 6.</li>
 <li>
 <strong>Extensibility:</strong> The language definitions and themes used by RPSyntaxHighlighter are simple JSON files. This means it's easy to add extra languages or design a theme that matches your app.</li>
 <li>
 <strong>Simplicity:</strong> The entire RPSyntaxHighlighter codebase consists of three classes, meaning it's easy to understand what's going on. It's also fully documented with <a href="http://gentlebytes.com/appledoc/">appledoc</a>.</li>
-</ol><p><strong>Note:</strong> RPSyntaxHighlighter is currently still in development and probably not yet ready for use in your code.</p>
+</ol><p><strong>Note:</strong> RPSyntaxHighlighter is currently still in development and not yet ready for use in your code.</p>
 
 <h2>Using RPSyntaxHighlighter</h2>
 
@@ -61,16 +61,19 @@
 
 <div class="highlight"><pre><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">"scopes"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"operator"</span><span class="p">],</span>
-        <span class="nt">"pattern"</span> <span class="p">:</span> <span class="s2">"\\+|\\!|\\-|&amp;(gt|lt|amp);|\\||\\*|\\="</span>
+      <span class="nt">"scopes"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"function"</span><span class="p">,</span> <span class="s2">"call"</span><span class="p">],</span>
+      <span class="nt">"pattern"</span> <span class="p">:</span> <span class="s2">"(\\w+?)(?=\\()"</span>
     <span class="p">},</span>
-    <span class="p">{</span><span class="err">...</span><span class="p">}</span>
+    <span class="p">{</span>
+      <span class="nt">"scopes"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"constant"</span><span class="p">,</span> <span class="s2">"language"</span><span class="p">],</span>
+      <span class="nt">"pattern"</span> <span class="p">:</span> <span class="s2">"(true|false|null)(?i)"</span>
+    <span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
 
 <p>As should be immediately obvious, a language definition is nothing more than a JSON document containing an array of objects. Each of these objects consists of a regular expression <em>pattern</em> and an array of <em>scopes</em> to be applied to the matched section of code. The scopes applied to a section of code are effectively tags used to tell the highlighter how to style a section of code.</p>
 
-<p>The array of scopes are applied to a section of code in order, as such you should specify them in order from least to most specific such that more specific styles override simpler ones. The same goes for the order of matchers in the document.</p>
+<p>The array of scopes are applied to a section of code in order, as such you should specify them in order from least to most specific such that more specific styles override simpler ones. However, the order of matchers in the document should be from highest to lowest precedence.</p>
 
 <h2>Theme Definitions</h2>
 
