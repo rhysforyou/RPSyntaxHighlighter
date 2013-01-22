@@ -15,6 +15,9 @@
 /** The code to be highlighted */
 @property (nonatomic, strong) NSString *code;
 
+/** The language of the code snippet */
+@property (nonatomic, strong) NSString *language;
+
 /** The theme to use when highlighting the code */
 @property (nonatomic, strong) RPSyntaxTheme *theme;
 

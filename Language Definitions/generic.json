@@ -13,10 +13,18 @@
   },
   {
     "scopes" : ["operator"],
-    "pattern" : "\\+|\\!|\\-|&(gt|lt|amp);|\\||\\*|\\="
+    "pattern" : "\\+|\\!|\\-|<|>|&|\\||\\*|\\="
   },
   {
     "scopes" : ["string"],
     "pattern" : "(?m)(\\\"[^\"]+\\\"|\\'[^']+\\')"
+  },
+  {
+    "scopes" : ["function", "call"],
+    "pattern" : "(\\w+?)(?=\\()"
+  },
+  {
+    "scopes" : ["constant", "language"],
+    "pattern" : "(true|false|null)(?i)"
   }
 ]

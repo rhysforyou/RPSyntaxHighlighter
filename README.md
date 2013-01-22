@@ -1,12 +1,12 @@
 # RPSyntaxHighlighter
 
-*An `NSAttributedString`-backed syntax highlighting library for iOS*
+*A regexp-powered, NSAttributedString-backed syntax highlighting library for iOS*
 
 ![A screenshot of the sample app](https://raw.github.com/rpwll/RPSyntaxHighlighter/master/Media/screenshot.png)
 
 RPSyntaxHighlighter is a easy to use, fully extensible syntax highlighting library for iOS. It was built with a few ideas in mind:
 
-1. **Ease of use:** it should be easy to highlight and process code in your app. This is why we use `NSAttributedString`s which can be displayed in most UIKit controls as of iOS 6.
+1. **Ease of use:** it should be easy to highlight and process code in your app. This is why we use `NSAttributedString` objects which can be displayed in most UIKit controls as of iOS 6.
 2. **Extensibility:** The language definitions and themes used by RPSyntaxHighlighter are simple JSON files. This means it's easy to add extra languages or design a theme that matches your app.
 3. **Simplicity:** The entire RPSyntaxHighlighter codebase consists of three classes, meaning it's easy to understand what's going on. It's also fully documented with [appledoc](http://gentlebytes.com/appledoc/).
 
@@ -23,16 +23,19 @@ A simple language definition looks like so:
 ```json
 [
     {
-        "scopes" : ["operator"],
-        "pattern" : "\\+|\\!|\\-|&(gt|lt|amp);|\\||\\*|\\="
+      "scopes" : ["function", "call"],
+      "pattern" : "(\\w+?)(?=\\()"
     },
-    {...}
+    {
+      "scopes" : ["constant", "language"],
+      "pattern" : "(true|false|null)(?i)"
+    }
 ]
 ```
 
 As should be immediately obvious, a language definition is nothing more than a JSON document containing an array of objects. Each of these objects consists of a regular expression *pattern* and an array of *scopes* to be applied to the matched section of code. The scopes applied to a section of code are effectively tags used to tell the highlighter how to style a section of code.
 
-The array of scopes are applied to a section of code in order, as such you should specify them in order from least to most specific such that more specific styles override simpler ones. The same goes for the order of matchers in the document.
+The array of scopes are applied to a section of code in order, as such you should specify them in order from least to most specific such that more specific styles override simpler ones. However, the order of matchers in the document should be from highest to lowest precedence.
 
 ## Theme Definitions
 
