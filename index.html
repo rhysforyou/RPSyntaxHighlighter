@@ -38,7 +38,17 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
-        <p><img src="https://raw.github.com/rpwll/RPSyntaxHighlighter/master/Media/screenshot.png" alt="A screenshot of the sample app"></p>
+        <p><em>A regexp-powered, NSAttributedString-backed syntax highlighting library for iOS</em></p>
+
+<p><strong>Note:</strong> RPSyntaxHighlighter is currently still in development and not yet ready for use in your code. In the future I'd like to do a few things:</p>
+
+<ul>
+<li>Thread the parsing code</li>
+<li>Make the library significantly faster</li>
+<li>Build syntax definitions for common languages</li>
+<li>Add a few themes to get people started</li>
+<li>Support CocoaPods</li>
+</ul><p><img src="https://raw.github.com/rpwll/RPSyntaxHighlighter/master/Media/screenshot.png" alt="A screenshot of the sample app"></p>
 
 <p>RPSyntaxHighlighter is a easy to use, fully extensible syntax highlighting library for iOS. It was built with a few ideas in mind:</p>
 
@@ -49,9 +59,7 @@
 <strong>Extensibility:</strong> The language definitions and themes used by RPSyntaxHighlighter are simple JSON files. This means it's easy to add extra languages or design a theme that matches your app.</li>
 <li>
 <strong>Simplicity:</strong> The entire RPSyntaxHighlighter codebase consists of three classes, meaning it's easy to understand what's going on. It's also fully documented with <a href="http://gentlebytes.com/appledoc/">appledoc</a>.</li>
-</ol><p><strong>Note:</strong> RPSyntaxHighlighter is currently still in development and not yet ready for use in your code.</p>
-
-<h2>Using RPSyntaxHighlighter</h2>
+</ol><h2>Using RPSyntaxHighlighter</h2>
 
 <p>The easiest way to use RPSyntaxHighlighter is by calling the <code>highlightCode:withLanguage</code> method on it. This single method covers 90% of the most common use cases. If you want to do anything more complicated, the class headers are all thoroughly documented and serve as a good starting point.</p>
 
