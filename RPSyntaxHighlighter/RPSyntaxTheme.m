@@ -39,7 +39,8 @@
     
     UIColor *foregroundColor = [UIColor colorWithHexString:self.styles[scope][@"color"]];
     UIColor *backgroundColor = [UIColor colorWithHexString:self.styles[scope][@"background"]];
-    UIFont *font = [UIFont fontWithName:self.styles[scope][@"font"] size:[self.styles[scope][@"fontSize"] floatValue]];
+    NSString *fontName = self.styles[scope][@"font"];
+	CGFloat fontSize = [self.styles[scope][@"fontSize"] floatValue];
     
     if (foregroundColor) {
         attributes[NSForegroundColorAttributeName] = foregroundColor;
@@ -49,8 +50,8 @@
         attributes[NSBackgroundColorAttributeName] = backgroundColor;
     }
     
-    if (font) {
-        attributes[NSFontAttributeName] = font;
+    if (fontName) {
+        attributes[NSFontAttributeName] = [UIFont fontWithName:fontName size:fontSize];
     }
     
     return attributes;
