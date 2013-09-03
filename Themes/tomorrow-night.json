@@ -2,7 +2,7 @@
   "default" : {
     "color" : "CDD1CF",
     "background" : "1C1F21",
-    "font" : "DejaVuSansMono",
+    "font" : "Courier",
     "fontSize" : 14.0
   },
   "keyword" : {
